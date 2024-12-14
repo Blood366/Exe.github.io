@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .bio {
+            flex: 1;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .bio img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .bio h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .bio p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .contact {
+            flex: 1;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .contact a {
+            display: inline-block;
+            background-color: #0012b3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .contact a:hover {
+            background-color: #00408d;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .highlight {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hola, Soy <span class="highlight">Tu Nombre</span></h1>
+    <p>Soy un <span class="highlight">Tu Ocupación</span> | Apasionado por la <span class="highlight">Tu Pasión</span> y la <span class="highlight">Tu Pasión</span>.</p>
+</header>
+
+<div class="container">
+    <section class="bio">
+        <img src="R.png" alt="Tu Foto">
+        <h2>Sobre Mí</h2>
+        <p>Hola, soy <span class="highlight">Tu Nombre</span>, un <span class="highlight">Tu Ocupación</span> con experiencia en <span class="highlight">Lugar Donde Tengas Experiencia</span>. Me apasiona la <span class="highlight">Tu Pasión</span>, el <span class="highlight">Tu Pasión</span> y todo lo relacionado con la <span class="highlight">Tu Entorno</span>. Mi objetivo es <span class="highlight">Tu Objetivo</span>. En este espacio, quiero compartir mis proyectos y conocimientos con la comunidad.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contacta conmigo</h2>
+        <p>Si tienes alguna pregunta o proyecto en mente, no dudes en ponerte en contacto conmigo. Estaré encantado de ayudarte a llevar tus ideas al siguiente nivel.</p>
+        <p><strong>Email:</strong> user123@ejemplo.com</p>
+        <p><strong>Teléfono:</strong> +123-456-7890</p>
+        <a href="mailto:tucorreo@ejemplo.com">Envíame un mensaje</a>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 <span class="highlight">Tu Nombre</span>. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

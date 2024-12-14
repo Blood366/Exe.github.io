@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar CSS de Página Externa</title>
+    <style>
+        :root {
+            --primary-color: #ff0000;  /* Naranja */
+            --primary-color-dark: #c50000;  /* Naranja oscuro */
+            --background-color: #f0f0f0;  /* Fondo claro */
+            --text-color: #333;  /* Texto oscuro */
+            --cta-background-color: #810000;  /* Fondo de la sección CTA */
+            --cta-text-color: #fff;  /* Texto blanco para CTA */
+            --footer-background-color: #333;  /* Fondo oscuro para footer */
+            --footer-text-color: #fff;  /* Texto blanco para footer */
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .controls {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .controls label {
+            margin: 5px;
+        }
+
+        .controls input {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Modificar CSS de la Página Visualizada</h1>
+
+<iframe id="iframe" src="https://es.wikipedia.org/wiki/Wikipedia:Portada"></iframe>
+
+<div class="controls">
+    <h3>Editar Colores de la Página Vista</h3>
+    <label for="primaryColor">Color Primario:</label>
+    <input type="color" id="primaryColor" value="#ff0000">
+
+    <label for="backgroundColor">Color de Fondo:</label>
+    <input type="color" id="backgroundColor" value="#f0f0f0">
+
+    <label for="textColor">Color del Texto:</label>
+    <input type="color" id="textColor" value="#333">
+
+    <label for="ctaBackgroundColor">Color de Fondo de CTA:</label>
+    <input type="color" id="ctaBackgroundColor" value="#810000">
+
+    <label for="ctaTextColor">Color de Texto en CTA:</label>
+    <input type="color" id="ctaTextColor" value="#ffffff">
+
+    <label for="footerBackgroundColor">Color de Fondo de Footer:</label>
+    <input type="color" id="footerBackgroundColor" value="#333">
+
+    <label for="footerTextColor">Color de Texto en Footer:</label>
+    <input type="color" id="footerTextColor" value="#ffffff">
+
+    <button onclick="applyStyles()">Aplicar Cambios</button>
+</div>
+
+<script>
+    function applyStyles() {
+        const iframe = document.getElementById('iframe');
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+        const primaryColor = document.getElementById('primaryColor').value;
+        const backgroundColor = document.getElementById('backgroundColor').value;
+        const textColor = document.getElementById('textColor').value;
+        const ctaBackgroundColor = document.getElementById('ctaBackgroundColor').value;
+        const ctaTextColor = document.getElementById('ctaTextColor').value;
+        const footerBackgroundColor = document.getElementById('footerBackgroundColor').value;
+        const footerTextColor = document.getElementById('footerTextColor').value;
+
+        // Cambiar las variables CSS dentro del iframe
+        iframeDocument.documentElement.style.setProperty('--primary-color', primaryColor);
+        iframeDocument.documentElement.style.setProperty('--background-color', backgroundColor);
+        iframeDocument.documentElement.style.setProperty('--text-color', textColor);
+        iframeDocument.documentElement.style.setProperty('--cta-background-color', ctaBackgroundColor);
+        iframeDocument.documentElement.style.setProperty('--cta-text-color', ctaTextColor);
+        iframeDocument.documentElement.style.setProperty('--footer-background-color', footerBackgroundColor);
+        iframeDocument.documentElement.style.setProperty('--footer-text-color', footerTextColor);
+    }
+</script>
+
+</body>
+</html>

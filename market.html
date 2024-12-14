@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Market</title>
+    <style>
+        :root {
+            --primary-color: #ff0000;  /* Naranja */
+            --primary-color-dark: #c50000;  /* Naranja oscuro */
+            --background-color: #f0f0f0;  /* Fondo claro */
+            --text-color: #333;  /* Texto oscuro */
+            --cta-background-color: #810000;  /* Fondo de la sección CTA */
+            --cta-text-color: #fff;  /* Texto blanco para CTA */
+            --footer-background-color: #333;  /* Fondo oscuro para footer */
+            --footer-text-color: #fff;  /* Texto blanco para footer */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--cta-text-color);
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 5px solid var(--primary-color-dark);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--footer-background-color);
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: var(--cta-text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background-image: url('https://th.bing.com/th/id/R.083b514854104256af44a1b62e24a964?rik=Zrfbh3Dkg6A4vw&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: var(--cta-text-color);
+            padding: 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--cta-text-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .products-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            margin-bottom: 1rem;
+        }
+
+        .product-info p {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background-color: var(--cta-background-color);
+            color: var(--cta-text-color);
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer {
+            background-color: var(--footer-background-color);
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        h1 {
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+   .xd {
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mini Market</h1>
+    <p>Encuentra todo lo que necesitas al mejor precio</p>
+</header>
+
+<nav>
+    <a href="#productos">Productos</a>
+    <a href="#ofertas">Ofertas</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+    <h1>Bienvenido a Mini Market</h1>
+    <p class="xd">Explora nuestra gran variedad de productos y ofertas exclusivas.</p>
+    <a href="#productos" class="btn">Explorar Productos</a>
+</section>
+
+<section class="products-container" id="productos">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Producto 1">
+        <div class="product-info">
+            <h3>Producto 1</h3>
+            <p>Descripción breve del producto.</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Producto 2">
+        <div class="product-info">
+            <h3>Producto 2</h3>
+            <p>Descripción breve del producto.</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Producto 3">
+        <div class="product-info">
+            <h3>Producto 3</h3>
+            <p>Descripción breve del producto.</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>¡No te pierdas nuestras ofertas especiales!</h2>
+    <p>Visítanos y encuentra los mejores descuentos de la temporada.</p>
+</section>
+
+<section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Teléfono: <a href="tel:+123456789">+1 234 567 89</a></p>
+    <p>Email: <a href="mailto:info@minimarket.com">info@minimarket.com</a></p>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 Mini Market. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

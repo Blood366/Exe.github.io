@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #7070707a;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #414141;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project {
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+        }
+        .project iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-content h3 {
+            margin-bottom: 1rem;
+        }
+        .project-content p {
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff0000;
+        }
+        footer {
+            background-color: #424242;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+         /* Estilos del mini reproductor */
+         .mini-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            background-color: #0051ff4d;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        .mini-player img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            animation: spin 5s linear infinite;
+        }
+        .mini-player .info {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .mini-player .info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        .mini-player button {
+            background-color: #0066ff8a;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .mini-player button:hover {
+            background-color: #ff4444;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .mini-player {
+            backdrop-filter: blur(10px); /* Controla la cantidad de desenfoque */
+            -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores basados en WebKit */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Proyectos</h1>
+    <p>Un espacio donde podras ver mis proyectos para los interesados en adquirir su propia pagina web.</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sobre-mi">Sobre Mí</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="container" id="proyectos">
+    <article class="project">
+        <iframe src="presen.html" alt="Proyecto 1"></iframe>
+        <div class="project-content">
+            <h3>Presentacion</h3>
+            <p>Pagina sencilla para presentacion.</p>
+            <a href="presen.html" class="btn">Ver</a>
+        </div>
+    </article>
+    <article class="project">
+        <iframe src="market.html" alt="Proyecto 2"></iframe>
+        <div class="project-content">
+            <h3>Pagina de tienda</h3>
+            <p>Pagina de tienda sencilla solo para presentacion (No se puede hacer compras)</p>
+            <a href="market.html" class="btn">Ver</a>
+        </div>
+    </article>
+    <article class="project">
+        <iframe src="game.html" alt="Proyecto 3"></iframe>
+        <div class="project-content">
+            <h3>Space game</h3>
+            <p>Pequeño juego de naves espaciales solo para PC.</p>
+            <a href="game.html" class="btn">Jugar</a>
+        </div>
+    </article>
+</article>
+
+</section>
+
+
+<section id="sobre-mi" class="container">
+    <h2>Sobre Mí</h2>
+    <p>Hola, soy [Tu Nombre], un apasionado por la tecnología, el desarrollo web y la programación. En este blog, comparto mis proyectos, aprendizajes y todo aquello que me parece interesante en el mundo de la tecnología.</p>
+</section>
+
+<section id="contacto" class="container">
+    <h2>Contacto</h2>
+    <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo a: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
+</section>
+
+<!-- Mini reproductor flotante -->
+<div class="mini-player">
+    <img src="ps.jpg" alt="Portada">
+    <div class="info">
+        <h4></h4>
+        <audio id="audio" src="ms.mp3"></audio>
+    </div>
+    <button id="play-pause">⏸️</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const playPauseButton = document.getElementById('play-pause');
+    const audio = document.getElementById('audio');
+    let isPlaying = false;
+
+    playPauseButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            playPauseButton.textContent = '▶️';
+        } else {
+            audio.play();
+            playPauseButton.textContent = '⏸️';
+        }
+        isPlaying = !isPlaying;
+    });
+</script>
+
+</body>
+</html>
